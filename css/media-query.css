@@ -1,57 +1,41 @@
 @charset "UTF-8";
 
-/* 
-    Typical Device Breakpoint (Recomendações do W3C)
-    Pequenas Telas: Até 600px
-    Celular: 600px até 768px
-    Tablet: 768px até 992px 
-    Desktop: 992px até 1200px  
-    Grandes telas: acima de 1200px
-*/
-
-/* Tablet */
-@media screen and (min-width: 768px) and (max-width: 992px) {
-    body {
-        background-image: linear-gradient(to top, #49a09d, #5f2c82);
-    }
-    section#login {
-        width: 80vw;
-        height: 300px;
-    }
-    section#login > div#imagem {
-        float: left;
-        width: 30%;
-        height: 100%;
-    }
-    section#login > div#formulario {
-        float: right;
-        width: 70%;
-        height: 100%;
-    }
+/* Tablet: reduzimos as duas colunas sem fixar a altura. */
+@media (max-width: 900px) {
+  .login { grid-template-columns: .82fr 1fr; min-height: 550px; }
+  .showcase { padding: 28px; }
+  .showcase__tag { display: none; }
+  .showcase__art { transform: scale(.68); }
+  .login__content { padding: 36px; }
 }
 
-/* PC */
-@media screen and (min-width: 992px) {
-    body {
-        background-image: linear-gradient(to bottom, #49a09d, #5f2c82);
-    }
-    section#login {
-        width: 990px;
-        height: 315px;
-    }
-    section#login > div#imagem {
-        float: right;
-        width: 50%;
-        height: 100%;
-    }
-    section#login > div#formulario {
-        float: left;
-        width: 50%;
-    }
-    div#formulario > h1{
-        font-size: 2em;
-    }
-    div#formulario > p {
-        font-size: 1.2em;
-    }
+/* Mobile first na experiência de uma coluna. */
+@media (max-width: 680px) {
+  .page { padding: 16px; align-items: center; }
+  .login { display: block; min-height: 0; border-radius: 20px; }
+  .showcase { display: none; }
+  .mobile-brand { display: inline-flex; margin-bottom: 46px; }
+  .login__content { min-height: 570px; padding: 34px clamp(22px, 6vw, 35px); }
+  .login__form { margin-top: 34px; }
+  .login__footnote { margin-top: 38px; }
+}
+
+@media (max-width: 360px) {
+  .page { padding: 10px; }
+  .login__content { padding: 28px 18px; min-height: 0; }
+  .mobile-brand { margin-bottom: 30px; }
+  .login__form { gap: 17px; }
+  .login__intro h1 { font-size: 26px; }
+}
+
+@media (max-height: 680px) and (min-width: 681px) {
+  .page { padding: 10px; }
+  .login { min-height: 540px; }
+  .showcase__art { transform: scale(.8); }
+  .login__form { gap: 14px; margin-top: 23px; }
+  .login__footnote { margin-top: 25px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition-duration: .01ms !important; }
 }
