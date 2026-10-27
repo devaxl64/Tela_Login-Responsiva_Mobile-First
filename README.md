@@ -2,6 +2,10 @@
 
 Interface de login desenvolvida com **HTML, CSS e JavaScript**, adaptada para celular, tablet e desktop. Um projeto de estudos que evoluiu para uma apresentação visual de portfólio.
 
+## Acesse a demonstração
+
+🌐 **[Visualizar tela de login online — GitHub Pages](https://devaxl64.github.io/Tela_Login-Responsiva_Mobile-First/)**
+
 ## Prévia
 
 | Celular | Tablet | Desktop |
@@ -21,9 +25,7 @@ Interface de login desenvolvida com **HTML, CSS e JavaScript**, adaptada para ce
 
 **HTML5 · CSS3 · JavaScript** (sem frameworks).
 
-## Como executar
-
-Abra `index.html` em um navegador. Também é possível utilizar a extensão Live Server no VS Code.
+## Sobre a demonstração
 
 **Observação:** o formulário é uma demonstração de interface. Ele valida os campos no navegador, mas **não autentica usuários nem envia senhas para um servidor**.
 
